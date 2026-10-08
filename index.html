@@ -71,6 +71,10 @@ p strong{color:var(--ink)}
   15%{opacity:1}
   100%{transform:translate(var(--x),-110px) scale(1) rotate(var(--r));opacity:0}}
 
+.ask--coffee{font-size:clamp(28px,8vw,40px);display:flex;align-items:center;justify-content:center;gap:12px}
+.face{width:1.15em;height:1.15em;flex:none;color:var(--magenta);animation:calm 3s ease-in-out infinite}
+@keyframes calm{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg) translateY(-2px)}}
+
 /* coffee cup */
 .cup{width:120px;height:auto;color:var(--teal-deep)}
 .cup .steam path{stroke:var(--teal);stroke-width:4;fill:none;stroke-linecap:round;animation:steam 2.2s ease-in-out infinite}
@@ -161,7 +165,16 @@ p strong{color:var(--ink)}
     <span class="eyebrow">رسالة خاصة لفريق التسويق</span>
     <h1>يا هلا<br>بـ<em>الجيش العظيم</em></h1>
     <p>قبل أي شي، عندنا سؤال واحد مصيري:</p>
-    <div class="ask">تقهويتي؟</div>
+    <div class="ask ask--coffee"><span>تقهويتي؟</span><svg class="face" viewBox="0 0 48 48" aria-hidden="true">
+      <circle cx="24" cy="24" r="21" fill="#FBE6F6" stroke="currentColor" stroke-width="2.6"/>
+      <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+        <path d="M12.5 15.5q4-3 8 -1.2"/><path d="M35.5 15.5q-4-3-8-1.2"/>
+        <path d="M13.5 22.5q3.5 3.4 7 0"/><path d="M27.5 22.5q3.5 3.4 7 0"/>
+        <path d="M18.5 32q5.5 4.2 11 0"/>
+      </g>
+      <ellipse cx="13" cy="28.5" rx="3.2" ry="2" fill="#F27CCF" opacity=".55"/>
+      <ellipse cx="35" cy="28.5" rx="3.2" ry="2" fill="#F27CCF" opacity=".55"/>
+    </svg></div>
     <div class="row">
       <button class="btn btn--yes" id="b-coffee-yes" type="button">إيه</button>
       <button class="btn btn--no" id="b-coffee-no" type="button">لا</button>
