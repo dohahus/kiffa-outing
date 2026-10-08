@@ -427,7 +427,7 @@ function loadDemo(){ try{ const d=JSON.parse(localStorage.getItem(LS)||'{}'); vo
 function saveDemo(){ try{ localStorage.setItem(LS,JSON.stringify({votes})); }catch(e){} }
 
 /* hosted site: Supabase table over plain fetch (empty in the artifact build) */
-const SB_URL='https://nuxsfhyfraipryjfzrln.supabase.co', SB_KEY='sb_publishable_6TOon0803XYYSuwU4D1P8g_lFQsjO62';
+const SB_URL='https://yhyvzxjlyuuirkroljuz.supabase.co', SB_KEY='sb_publishable_z654oCEWiLhcaEFQRmrCPQ_NRhhyJpO';
 const sb=!!SB_URL && !SB_URL.startsWith('{{');
 async function sbFetch(path,opts={}){
   const r=await fetch(SB_URL+'/rest/v1/'+path,{...opts,headers:{apikey:SB_KEY,Authorization:'Bearer '+SB_KEY,'Content-Type':'application/json',...(opts.headers||{})}});
